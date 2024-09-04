@@ -3,6 +3,17 @@
 #include "ColorPair.h"
 namespace TelCoColorCoder
 {
+    std::string printColorCodingManual(){
+        std::string message = "Color Coding Manual\n";
+        for(int pairNumber = 1; pairNumber <= 25; pairNumber++) {
+            ColorPair colorPair = GetColorFromPairNumber(pairNumber);
+            message += std::to_string(pairNumber);
+            message += " ";
+            message += colorPair.ToString();
+            message += "\n";
+        }
+        return message;
+    }
     void testNumberToPair(int pairNumber,
         TelCoColorCoder::MajorColor expectedMajor,
         TelCoColorCoder::MinorColor expectedMinor)
@@ -26,11 +37,12 @@ namespace TelCoColorCoder
 }
  
     int main() {
-        testNumberToPair(4, TelCoColorCoder::WHITE, TelCoColorCoder::BROWN);
-        testNumberToPair(5, TelCoColorCoder::WHITE, TelCoColorCoder::SLATE);
+        //testNumberToPair(4, TelCoColorCoder::WHITE, TelCoColorCoder::BROWN);
+        //testNumberToPair(5, TelCoColorCoder::WHITE, TelCoColorCoder::SLATE);
  
-        testPairToNumber(TelCoColorCoder::BLACK, TelCoColorCoder::ORANGE, 12);
-        testPairToNumber(TelCoColorCoder::VIOLET, TelCoColorCoder::SLATE, 25);
- 
+        //testPairToNumber(TelCoColorCoder::BLACK, TelCoColorCoder::ORANGE, 12);
+        //testPairToNumber(TelCoColorCoder::VIOLET, TelCoColorCoder::SLATE, 25);
+
+        std::cout<< TelCoColorCoder::printColorCodingManual();
         return 0;
     }
