@@ -1,6 +1,6 @@
 #include <iostream>
 #include <assert.h>
-#include "ColorPair.h"
+#include "testColorPair.h"
 
 namespace TelCoColorCoder
 {
@@ -8,8 +8,7 @@ namespace TelCoColorCoder
         TelCoColorCoder::MajorColor expectedMajor,
         TelCoColorCoder::MinorColor expectedMinor)
     {
-        TelCoColorCoder::ColorPair colorPair =
-            TelCoColorCoder::GetColorFromPairNumber(pairNumber);
+        TelCoColorCoder::ColorPair colorPair = TelCoColorCoder::GetColorFromPairNumber(pairNumber);
         std::cout << "Got pair " << colorPair.ToString() << std::endl;
         assert(colorPair.getMajor() == expectedMajor);
         assert(colorPair.getMinor() == expectedMinor);
