@@ -1,6 +1,5 @@
 #include "ColorPair.h"
- 
- 
+
 namespace TelCoColorCoder
 {
      const char* MajorColorNames[] = {
