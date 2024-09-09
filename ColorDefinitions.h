@@ -1,3 +1,6 @@
+#ifndef COLORDEFINITIONS_H
+#define COLORDEFINITIONS_H
+
 #include <string>
 
 namespace TelCoColorCoder {
@@ -9,3 +12,5 @@ namespace TelCoColorCoder {
     extern const char* MinorColorNames[];
     extern int numberOfMinorColors;
 }
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef COLORPAIR_H
+#define COLORPAIR_H
+
 #include <string>
 #include "ColorDefinitions.h"
  
@@ -16,4 +19,7 @@ namespace TelCoColorCoder
  
     ColorPair GetColorFromPairNumber(int pairNumber);
     int GetPairNumberFromColor(MajorColor major, MinorColor minor);
+    std::string getColorCodingManual();
 }
+
+#endif
